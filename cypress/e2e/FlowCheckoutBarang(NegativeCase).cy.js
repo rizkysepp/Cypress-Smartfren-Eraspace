@@ -2,6 +2,8 @@ require ('cypress-xpath')
 
 import * as login from '../Flows/MainLogin.cy'
 
+
+
 it('Melakukan Checkout Suatu barang di Sauce Demo (Negative Case - Pada saat isi form data diri di halaman checkout information)', ()=> {
     describe('Login', ()=> {
         cy.log('Step 1')
@@ -51,7 +53,7 @@ it('Melakukan Checkout Suatu barang di Sauce Demo (Negative Case - Pada saat isi
                             cy.reload(true)
                         })
                             cy.then(() => {
-                                cy.log('Step 5 - Isi form data Checkout (Tidak isi First Name)')
+                                cy.log('Step 7 - Isi form data Checkout (Tidak isi First Name)')
                                 cy.get('#last-name')
                                 .type('Washington')
                                 .should('have.value', 'Washington')
@@ -60,13 +62,12 @@ it('Melakukan Checkout Suatu barang di Sauce Demo (Negative Case - Pada saat isi
                                 .should('have.value','4215')
                             })
                                 cy.then(() => {
-                                    cy.log('Step 6 - Klik button Continue')
-                                    cy.get('@Continue_Button')
+                                    cy.log('Step 8 - Klik button Continue')
+                                    cy.get('#continue')
                                     .click({force:true})
-                                    cy.get('@Error_Message')
+                                    cy.get('h3').as('Error_Message')
                                     .should('contain.text', 'Error: First Name is required')
-                                })
-
+                                    cy.reload(true)
+                                })                           
 })
-
 
