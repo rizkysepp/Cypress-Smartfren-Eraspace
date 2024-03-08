@@ -6,7 +6,7 @@ import * as login from '../Flows/MainLogin.cy'
 
 it('Melakukan Checkout Suatu barang di Sauce Demo (Negative Case - Pada saat isi form data diri di halaman checkout information)', ()=> {
     describe('Login', ()=> {
-        cy.log('Step 1')
+        cy.log('Step 1 - Login website')
         var acc_type
         login.MainLogin(acc_type='normal')
     })
