@@ -14,30 +14,5 @@ export function MainLogin(acc_type) {
     // Akses Main URL dan Login
     cy.visit(`${cons.MAIN_URL}`)
     
-    cy.visit('https://www.saucedemo.com')
-
-    cy.then(() => {
-        cy.log('Input Username')
-        cy.get('#user-name')
-        .type('standard_user')
-        .should('have.value', 'standard_user')
-
-    })
-
-    cy.then(() => {
-        cy.log('Input Password')
-        cy.get('#password')
-        .type('secret_sauce')
-        .should('have.value', 'secret_sauce')
-
-    })
-
-    cy.then(() => {
-        cy.log('Klik button Login')
-        cy.get('#login-button')
-        .click({force:true})
-        cy.wait(3000)
-        cy.url()
-        .should('include', '/inventory')
-    })
-}
+    cy.visit('https://www.ebay.com')
+    }
