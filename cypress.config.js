@@ -6,8 +6,10 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       screenshotOnRunFailure=true
-      baseUrl:'https://www.google.com'
+      baseUrl:'https://google.com'
       // require('cypress-mochawesome-reporter/plugin')(on)
+      pageLoadTimeout : 900000 
+    //  defaultCommandTimeout : 5000
     },
   },
   // reporter:'cypress-mochawesome-reporter',
