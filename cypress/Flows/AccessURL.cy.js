@@ -6,5 +6,5 @@ export function AccessURL(){
 
 cy.visit(`${cons.MAIN_URL}`)
     
-cy.visit('https://www.smartfren.com/')
+cy.visit('https://www.traveloka.com/')
 }

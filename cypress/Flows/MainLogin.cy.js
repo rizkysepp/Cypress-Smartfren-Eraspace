@@ -14,5 +14,5 @@ export function MainLogin(acc_type) {
     // Akses Main URL dan Login
     cy.visit(`${cons.MAIN_URL}`)
     
-    cy.visit('https://www.smartfren.com/')
+    cy.visit('https://traveloka.com/')
     }
